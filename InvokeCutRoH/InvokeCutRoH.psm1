@@ -321,7 +321,7 @@
     Compatible with Windows PowerShell and PowerShell 7+ on Windows
 
 .LINK
-    https://github.com/IT-Administrators/PSForAdmins/tree/main/Linux-Commands-For-PowerShell
+    https://github.com/IT-Administrators/InvokeCutRoH
 #>
 
 Function Invoke-Cut{
