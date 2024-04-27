@@ -30,21 +30,20 @@ I've written this module, to have a similar functionality of the linux cut comma
 The module is not published to PSGallery so you can only download it from github:
 
 1. Using Git
-```Powershell
-# Powershell
-# Creates a directory in your current directory
-md InvokeCutRoH
-# Change location to the created directory
-cd InvokeCutRoH
-# Pull necessary files
-git pull "https://github.com/IT-Administrators/InvokeCutRoH.git"
 
+```PowerShell
+# Powershell
+# Pull necessary files.
+git clone "https://github.com/IT-Administrators/InvokeCutRoH.git"
+# Change location to project directory.
+cd .\InvokeCutRoH\
 ```
 2. Using Powershell
-```Powershell
-# Download zip archive using powershell
+
+```PowerShell
+# Download zip archive to current directory using powershell.
 Invoke-WebRequest -Uri "https://github.com/IT-Administrators/InvokeCutRoH/archive/refs/heads/main.zip" -OutFile "InvokeCutRoH.zip"
-# Than expand archive
+# Than expand archive.
 Expand-Archive -Path ".\InvokeCutRoH.zip"
 ```
 
@@ -55,11 +54,17 @@ Expand-Archive -Path ".\InvokeCutRoH.zip"
 You can import the module in two ways:
 
 1. Import from current directory 
-```Powershell
+```PowerShell
 # Import from current directory
 Import-Module -Path ".\InvokeCutRoH.psm1" -Force -Verbose
 ```
 2. Copy it to your module directory to get it imported on every session start. This depends also on your executionpolicy.
+
+To get your module directorys use the following command:
+
+```PowerShell
+$env:PSModulePath
+```
 
 ### Using the function
 
@@ -69,7 +74,7 @@ The following example is just a short demonstration on how to use the function.
 
 The function accepts a file input as well as a single string. If a file is provided the file is read into a string array and then processed line by line. 
 
-```Powershell
+```PowerShell
 # Create a string which you want to cut from. 
 $DemoString = "This is a demonstration string."
 # Save result to use it.
@@ -81,7 +86,7 @@ Output: T
 ```
 
 For more detailed examples use:
-```Powershell
+```PowerShell
 Get-Help Invoke-Cut -Full
 ```
 
