@@ -1,4 +1,4 @@
-# Import-Module -Name .\InvokeCutRoH\InvokeCutRoH.psm1 -Scope Local -Force -Verbose
+Import-Module -Name .\InvokeCutRoH\InvokeCutRoH.psm1 -Scope Local -Force -Verbose
 
 Describe  'InvokeCutRoH tests' {
     # Check if module exists, if not import it.
